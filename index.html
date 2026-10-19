@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>MAILFLOW OS</title>
+    <meta name="description" content="MAILFLOW OS – Every inbox. One intelligent system." />
+    <meta name="theme-color" content="#0b0d13" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MAILFLOW" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Intro: wird von app.js gesteuert -->
+    <div id="intro" aria-hidden="true">
+      <canvas id="intro-canvas"></canvas>
+      <div class="intro-center">
+        <svg class="intro-logo" viewBox="0 0 64 64" fill="none">
+          <defs>
+            <linearGradient id="introGrad" x1="10" y1="20" x2="54" y2="44" gradientUnits="userSpaceOnUse">
+              <stop offset="0" style="stop-color: var(--a1-light)" />
+              <stop offset="1" style="stop-color: var(--blue)" />
+            </linearGradient>
+          </defs>
+          <path d="M13 21c10 0 13 11 23 11h15" stroke="url(#introGrad)" stroke-width="4.6" stroke-linecap="round" />
+          <path d="M13 32h38" stroke="url(#introGrad)" stroke-width="4.6" stroke-linecap="round" />
+          <path d="M13 43c10 0 13-11 23-11" stroke="url(#introGrad)" stroke-width="4.6" stroke-linecap="round" />
+        </svg>
+        <h1 class="intro-word" aria-label="MAILFLOW OS"></h1>
+        <p class="intro-tag">Every inbox. One intelligent system.</p>
+      </div>
+      <button class="intro-skip" type="button">Überspringen</button>
+    </div>
+
+    <div id="app"></div>
+    <div id="overlay-root"></div>
+    <div id="toasts" aria-live="polite"></div>
+
+    <noscript>MAILFLOW OS benötigt JavaScript.</noscript>
+    <script src="app.js" defer></script>
+  </body>
+</html>
